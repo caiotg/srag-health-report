@@ -271,6 +271,7 @@ class MetricsTool:
 
 
 
+
 def criar_metrics_tool(db_path: str = "data/processed/srag.db") -> MetricsTool:
 
     return MetricsTool(db_path)
@@ -306,21 +307,11 @@ def tool_taxa_vacinacao() -> str:
 
 
 if __name__ == "__main__":
-    print("=" * 60)
-    print("TESTE DO METRICS TOOL")
-    print("=" * 60)
 
     try:
-        # Inicializar tool
+
         metrics = MetricsTool()
-
-        # Calcular e exibir todas as métricas
         print(metrics.gerar_resumo_metricas())
-
-        # Exibir dados brutos de cada métrica
-        print("\n" + "=" * 60)
-        print("DADOS BRUTOS DAS MÉTRICAS")
-        print("=" * 60)
 
         todas = metrics.calcular_todas_metricas()
         for nome, metrica in todas.items():
@@ -328,10 +319,5 @@ if __name__ == "__main__":
             for key, value in metrica.dados_brutos.items():
                 print(f"   {key}: {value}")
 
-        print("\n" + "=" * 60)
-        print(" TODOS OS TESTES PASSARAM!")
-        print("=" * 60)
-
     except FileNotFoundError as e:
         print(f"\n Erro: {e}")
-        print("Execute primeiro o preprocessing.py para criar o banco de dados.")

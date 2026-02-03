@@ -250,9 +250,7 @@ if __name__ == "__main__":
     df = processar_dados_completo(CAMINHO_CSV, nrows=None)
 
     stats = gerar_estatisticas(df)
-    print("\n" + "=" * 50)
-    print("ESTATÍSTICAS DO DATASET")
-    print("=" * 50)
+
     for key, value in stats.items():
         print(f"{key}: {value}")
 

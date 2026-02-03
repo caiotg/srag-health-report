@@ -14,6 +14,18 @@ from .charts_tool import (
     tool_gerar_grafico_diario,
     tool_gerar_grafico_mensal
 )
+from .news_tool import (
+    NewsTool,
+    Noticia,
+    criar_news_tool,
+    tool_buscar_noticias_srag,
+    tool_obter_contexto_noticias
+)
+from .report_tool import (
+    ReportTool,
+    criar_report_tool,
+    tool_gerar_relatorio_pdf
+)
 
 __all__ = [
     # Database
@@ -34,4 +46,16 @@ __all__ = [
     'criar_charts_tool',
     'tool_gerar_grafico_diario',
     'tool_gerar_grafico_mensal',
+
+    # News
+    'NewsTool',
+    'Noticia',
+    'criar_news_tool',
+    'tool_buscar_noticias_srag',
+    'tool_obter_contexto_noticias',
+
+    # Report
+    'ReportTool',
+    'criar_report_tool',
+    'tool_gerar_relatorio_pdf',
 ]
