@@ -128,7 +128,7 @@ python src/data/preprocessing.py data/raw/NOME_DO_ARQUIVO.csv
 
 Isso criará o banco SQLite em `data/processed/srag.db`.
 
-## 💻 Como Usar
+## Como Usar
 
 ### Modo Relatório (Padrão)
 
@@ -171,10 +171,10 @@ python src/main.py --modo verificar
 python src/main.py --modo relatorio
 
 # Saída esperada:
-# ✅ Agente inicializado!
-# 📊 Gerando relatório completo...
-# ✅ Relatório gerado com sucesso!
-# 📄 Arquivo: reports/relatorio_srag_20240203_143022.pdf
+# Agente inicializado!
+# Gerando relatório completo...
+# Relatório gerado com sucesso!
+# Arquivo: reports/relatorio_srag_20240203_143022.pdf
 ```
 
 ## Relatório Gerado
