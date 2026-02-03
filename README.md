@@ -117,7 +117,7 @@ Para obter a chave da API Groq (gratuita):
 #### 5.1 Baixe os dados do DATASUS
 
 1. Acesse: [opendatasus.saude.gov.br/dataset/srag-2021-a-2024](https://opendatasus.saude.gov.br/dataset/srag-2021-a-2024)
-2. Baixe o arquivo CSV mais recente (ex: SRAG 2024)
+2. Baixe o arquivo CSV mais recente (ex: SRAG 2025)
 3. Coloque o arquivo em `data/raw/`
 
 #### 5.2 Processe os dados
