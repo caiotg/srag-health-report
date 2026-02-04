@@ -117,7 +117,7 @@ Para obter a chave da API Groq (gratuita):
 #### 5.1 Baixe os dados do DATASUS
 
 1. Acesse: [opendatasus.saude.gov.br/dataset/srag-2021-a-2024](https://opendatasus.saude.gov.br/dataset/srag-2021-a-2024)
-2. Baixe o arquivo CSV mais recente (ex: SRAG 2024)
+2. Baixe o arquivo CSV mais recente (ex: SRAG 2025)
 3. Coloque o arquivo em `data/raw/`
 
 #### 5.2 Processe os dados
@@ -128,7 +128,7 @@ python src/data/preprocessing.py data/raw/NOME_DO_ARQUIVO.csv
 
 Isso criará o banco SQLite em `data/processed/srag.db`.
 
-## 💻 Como Usar
+## Como Usar
 
 ### Modo Relatório (Padrão)
 
@@ -171,10 +171,10 @@ python src/main.py --modo verificar
 python src/main.py --modo relatorio
 
 # Saída esperada:
-# ✅ Agente inicializado!
-# 📊 Gerando relatório completo...
-# ✅ Relatório gerado com sucesso!
-# 📄 Arquivo: reports/relatorio_srag_20240203_143022.pdf
+# Agente inicializado!
+# Gerando relatório completo...
+# Relatório gerado com sucesso!
+# Arquivo: reports/relatorio_srag_20240203_143022.pdf
 ```
 
 ## Relatório Gerado
