@@ -30,7 +30,7 @@ from tools.news_tool import NewsTool
 from tools.report_tool import ReportTool
 
 class EstadoAgente(TypedDict):
-    """Estado do agente durante a execução."""
+
     messages: Annotated[list, add_messages]
     metricas: Dict[str, Any]
     noticias: List[Dict]

@@ -461,12 +461,9 @@ if __name__ == "__main__":
     try:
 
         report = ReportTool()
-
-        print("\nGerando relatório PDF...")
         caminho = report.gerar_relatorio()
 
-        print(f"\nRelatório gerado com sucesso!")
-        print(f"📄 Arquivo: {caminho}")
+        print(f"Arquivo: {caminho}")
 
     except Exception as e:
         print(f"\n Erro: {e}")

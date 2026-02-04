@@ -244,7 +244,6 @@ if __name__ == "__main__":
 
     if not os.path.exists(CAMINHO_CSV):
         logger.error(f"Arquivo não encontrado: {CAMINHO_CSV}")
-        logger.info("Uso: python preprocessing.py <caminho_do_csv>")
         sys.exit(1)
 
     df = processar_dados_completo(CAMINHO_CSV, nrows=None)
@@ -255,6 +254,5 @@ if __name__ == "__main__":
         print(f"{key}: {value}")
 
     salvar_sqlite(df, CAMINHO_DB)
-    
-    print("\nProcessamento concluído!")
+
     print(f"Banco de dados salvo em: {CAMINHO_DB}")

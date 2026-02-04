@@ -254,27 +254,20 @@ if __name__ == "__main__":
 
         news = NewsTool()
 
-        print("\n1. Busca simples de notícias:")
         noticias = news.buscar_noticias(max_resultados=3)
         for n in noticias:
-            print(f"   - {n.titulo[:60]}...")
+            print(f"- {n.titulo[:60]}...")
 
-        print("\n2. Resumo formatado:")
         print(news.obter_resumo_noticias(max_noticias=3))
 
-        print("\n3. Dados para relatório:")
         dados = news.obter_noticias_para_relatorio(max_noticias=2)
-        print(f"   Total encontradas: {dados['total_encontradas']}")
-        print(f"   Fontes confiáveis: {dados['fontes_confiaveis']}")
-
-        print("\n" + "=" * 60)
-        print("TODOS OS TESTES PASSARAM!")
-        print("=" * 60)
+        print(f"Total encontradas: {dados['total_encontradas']}")
+        print(f"Fontes confiáveis: {dados['fontes_confiaveis']}")
 
     except ImportError as e:
-        print(f"\n Erro de importação: {e}")
+        print(f"\ Erro de importação: {e}")
     except Exception as e:
-        print(f"\n Erro: {e}")
+        print(f"\nErro: {e}")
         import traceback
 
         traceback.print_exc()

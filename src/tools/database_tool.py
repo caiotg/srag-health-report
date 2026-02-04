@@ -232,57 +232,34 @@ def criar_database_tool(db_path: str = "data/processed/srag.db") -> DatabaseTool
     return DatabaseTool(db_path)
 
 if __name__ == "__main__":
-    print("=" * 60)
-    print("TESTE DO DATABASE TOOL")
-    print("=" * 60)
 
     try:
-        # Inicializar tool
         db = DatabaseTool()
 
-        # Teste 1: Estatísticas gerais
-        print("\n1. Estatísticas gerais:")
         stats = db.obter_estatisticas_gerais()
         for key, value in stats.items():
-            print(f"   {key}: {value}")
+            print(f"{key}: {value}")
 
-        # Teste 2: Período dos dados
-        print("\n2. Período dos dados:")
         periodo = db.obter_periodo_dados()
-        print(f"   De: {periodo['data_inicio']}")
-        print(f"   Até: {periodo['data_fim']}")
+        print(f"De: {periodo['data_inicio']}")
+        print(f"Até: {periodo['data_fim']}")
 
-        # Teste 3: Dados de óbitos
-        print("\n3. Dados de óbitos:")
         obitos = db.obter_dados_obitos()
         print(obitos.to_string(index=False))
 
-        # Teste 4: Dados de UTI
-        print("\n4. Dados de UTI:")
         uti = db.obter_dados_uti()
         print(uti.to_string(index=False))
 
-        # Teste 5: Dados de vacinação
-        print("\n5. Dados de vacinação:")
         vacina = db.obter_dados_vacinacao()
         print(vacina.to_string(index=False))
 
-        # Teste 6: Casos por dia (últimos 7 dias)
-        print("\n6. Casos por dia (últimos 7 dias):")
         casos_dia = db.casos_por_dia(dias=7)
         print(casos_dia.to_string(index=False))
 
-        # Teste 7: Guardrail - Query maliciosa
-        print("\n7. Teste de Guardrail (query maliciosa):")
         try:
             db.executar_query("DROP TABLE srag")
         except ValueError as e:
-            print(f"   ✅ Bloqueado corretamente: {e}")
-
-        print("\n" + "=" * 60)
-        print(" TODOS OS TESTES PASSARAM!")
-        print("=" * 60)
+            print(f"Bloqueado corretamente: {e}")
 
     except FileNotFoundError as e:
         print(f"\n Erro: {e}")
-        print("Execute primeiro o preprocessing.py para criar o banco de dados.")
